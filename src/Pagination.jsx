@@ -1,4 +1,5 @@
-const Pagination = () => {
+const Pagination = ({ bookmarks, currentPage, setCurrentPage }) => {
+    
 
   return (
     <div className="pagination-main">
