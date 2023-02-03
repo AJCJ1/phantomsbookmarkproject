@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import List from "./List";
 import Pagination from "./Pagination"
+import validatesInput from "./ValidatesInput";
 
 const Main = () => {
   // State to hold an array of all bookmarks
@@ -33,7 +34,7 @@ const Main = () => {
     setBookmarks(storedBookmarks);
   }, []);
 
-  // Function to add a bookmark to local storage
+  // function to add a bookmark to local storage
   const submitAddBookmark = () => {
     setBookmarks([...bookmarks, { name, url }]);
     localStorage.setItem(
@@ -42,7 +43,7 @@ const Main = () => {
     );
   };
 
-  // Function to handle editing a bookmark
+  // function to handle editing a bookmark
   const handleEditBookmark = (bookmark, index) => {
     setEditing(true);
     setEditIndex(index);
@@ -50,7 +51,7 @@ const Main = () => {
     setUrl(bookmark.url);
   };
 
-  // Function to submit an edited bookmark to local storage
+  // function to submit an edited bookmark to local storage
   const submitEditBookmark = () => {
     const newBookmarks = [...bookmarks];
     newBookmarks[editIndex] = { name, url };
@@ -59,7 +60,7 @@ const Main = () => {
     setEditing(false);
   };
 
-  // Function to delete all bookmarks
+  // function to delete all bookmarks
   const handleDeleteAllBookmarks = () => {
     // confirms that user wants to delete all, then sets localstorage
     // to an empty array
@@ -68,7 +69,7 @@ const Main = () => {
       localStorage.setItem("bookmarks", JSON.stringify([]));
     }
   };
-
+  // function to delete a single bookmark by index
   const handleDeleteBookmark = (index) => {
     const newBookmarks = [...bookmarks];
     const bookmarkIndex = index;
@@ -84,12 +85,17 @@ const Main = () => {
         <div className="form-container">
         <form
           className="form-main"
-          onSubmit={async (e) => {
+          onSubmit={ async (e) => {
             // Prevents default form refresh, should complete input validation before submission
             e.preventDefault();
-            editing ? submitEditBookmark() : submitAddBookmark();
+            // tests if URL matches regexp
+            const result = await validatesInput(url, name);
+            if (result) {
+              // checks if the user is editing or adding a new bookmark
+              editing ? submitEditBookmark() : submitAddBookmark();
               setName("");
               setUrl("");
+            }
             }
           }>
           {/* input field to enter bookmark name */}
