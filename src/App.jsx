@@ -1,16 +1,13 @@
-import React from "react";
 import { createRoot } from "react-dom/client";
 
-
-
 const App = () => {
-  return React.createElement(
-    "div",
-    {},
-    React.createElement("h1", {}, "Testing")
+  return (
+    <div>
+      <h1>Phantom Bookmarks</h1>
+    </div>
   );
 };
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(React.createElement(App));
+root.render(<App />);
