@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
 import Main from "./Main";
+import ThreeGhost from "./ThreeGhost";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         Phantom Bookmarks
       </h1>
       <Main />
+      <ThreeGhost />
     </div>
   );
 };
