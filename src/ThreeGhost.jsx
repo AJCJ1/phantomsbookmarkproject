@@ -60,18 +60,33 @@ document.body.appendChild( renderer.domElement );
   var ghostGeometry = new THREE.ExtrudeGeometry(ghostShape, extrudeSettings);
   var ghost = new THREE.Mesh(ghostGeometry, material);
 
-  scene.add(ghost)
+  // make the eyes
+  var eyeGeometry = new THREE.SphereGeometry(1.8, 32, 32);
 
-  camera.position.z = 50;
+  var eyeMaterial = new THREE.MeshBasicMaterial({ color: 0xF4F4F4 });
 
-  // const cube = new THREE.Mesh( geometry, material );
-  // scene.add(cube);
+  // makes whites of the eyes mesh
+  var leftEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
+  leftEye.position.set(x + 3, y + 12, 1.6);
+  var rightEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
+  rightEye.position.set(x + 7, y + 12, 1.6);
 
-  // camera.position.z = 5;
+
+  // define final group and put meshes together
+  var ghostGroup = new THREE.Group();
+  ghostGroup.add(ghost);
+  ghostGroup.add(leftEye);
+  ghostGroup.add(rightEye);
+
+
+  // add group to the canvas scene
+  scene.add(ghostGroup);
+
+  camera.position.z = 40;
 
   // new light to shine on ghost, white, 3 intensity and 100 distance
   var light = new THREE.PointLight(0xffffff, 3, 100);
-  light.position.set(50, 50, 50);
+  light.position.set(45, 50, 50);
   scene.add(light);
 
 
