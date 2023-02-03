@@ -1,3 +1,5 @@
+import FetchUrl from "./FetchUrl";
+
 const validatesInput = async (url, name) => {
   // defines url regexp pattern to match/test against
   const urlPattern = new RegExp(
@@ -13,6 +15,18 @@ const validatesInput = async (url, name) => {
   );
   // only accept alphanumerical, avoid SQL injections.
   const namePattern = new RegExp(/^[a-zA-Z0-9]+$/);
+
+
+
+  const respondsOk = await FetchUrl(url);
+    if (respondsOk) console.log("true");
+
+
+
+
+
+
+
   // // if the URL and name match then fetch
   if (urlPattern.test(url) && namePattern.test(name)) {
     // if jsut url isn't written correctly, give example of how to do it right
