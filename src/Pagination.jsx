@@ -19,8 +19,13 @@ const Pagination = ({ bookmarks, currentPage, setCurrentPage }) => {
       {/* Render buttons for each page number */}
       {pageNumbers.map((number) => (
         <button
+          key={number}
           // Call the setCurrentPage function with the current page number when clicked
           onClick={() => setCurrentPage(number)}
+          // Apply a class to indicate if the button is for the active page
+          className={
+            currentPage === number ? "page-active page-number" : "page-number"
+          }
         >
           {number}
         </button>
