@@ -48,6 +48,16 @@ const Main = () => {
     setEditing(false);
   };
 
+  // Function to delete all bookmarks
+  const handleDeleteAllBookmarks = () => {
+    // confirms that user wants to delete all, then sets localstorage
+    // to an empty array
+    if (window.confirm("Are you sure you want to delete all bookmarks?")) {
+      setBookmarks([]);
+      localStorage.setItem("bookmarks", JSON.stringify([]));
+    }
+  };
+
   return (
     <div>
         {/* form to submit a new bookmark */}
@@ -86,7 +96,7 @@ const Main = () => {
         </button>
         </form>
         <h2>Your bookmarks: </h2>
-        <button className="delete-all-btn">
+        <button className="delete-all-btn" onClick={handleDeleteAllBookmarks}>
           Delete All Bookmarks
         </button>
         {/* renders list of bookmarks */}
