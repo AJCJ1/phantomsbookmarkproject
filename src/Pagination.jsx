@@ -13,6 +13,10 @@ const Pagination = ({ bookmarks, currentPage, setCurrentPage }) => {
     <div className="pagination-main">
       <button
         className="pagination-btn"
+        // Disable the button if the current page is the first page
+        disabled={currentPage === 1}
+        // Call the setCurrentPage function with the previous page number when clicked
+        onClick={() => setCurrentPage(currentPage - 1)}
       >
         {"<"}
       </button>
@@ -32,6 +36,8 @@ const Pagination = ({ bookmarks, currentPage, setCurrentPage }) => {
       ))}
       <button
         className="pagination-btn"
+        // Disable the button if the current page is the last page
+        disabled={currentPage === pageNumbers.length}
         // Call the setCurrentPage function with the next page number when clicked
         onClick={() => setCurrentPage(currentPage + 1)}
       >
