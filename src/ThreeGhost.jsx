@@ -62,21 +62,30 @@ document.body.appendChild( renderer.domElement );
 
   // make the eyes
   var eyeGeometry = new THREE.SphereGeometry(1.8, 32, 32);
+  var irisGeometry = new THREE.SphereGeometry(1, 32, 32);
+  var eyeMaterial = new THREE.MeshBasicMaterial({ color: 0xf4f4f4 });
+  var irisMaterial = new THREE.MeshBasicMaterial({ color: 0x0951c6 });
 
-  var eyeMaterial = new THREE.MeshBasicMaterial({ color: 0xF4F4F4 });
+   // makes the blue iris mesh
+   var irisLeft = new THREE.Mesh(irisGeometry, irisMaterial);
+   irisLeft.position.set(x + 3.2, y + 11.9, 2.5);
+   var irisRight = new THREE.Mesh(irisGeometry, irisMaterial);
+   irisRight.position.set(x + 7.2, y + 11.9, 2.5);
+   // makes whites of the eyes mesh
+   var leftEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
+   leftEye.position.set(x + 3, y + 12, 1.6);
+   var rightEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
+   rightEye.position.set(x + 7, y + 12, 1.6);
 
-  // makes whites of the eyes mesh
-  var leftEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
-  leftEye.position.set(x + 3, y + 12, 1.6);
-  var rightEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
-  rightEye.position.set(x + 7, y + 12, 1.6);
-
-
-  // define final group and put meshes together
-  var ghostGroup = new THREE.Group();
-  ghostGroup.add(ghost);
-  ghostGroup.add(leftEye);
-  ghostGroup.add(rightEye);
+   // define final group and put meshes together
+   var ghostGroup = new THREE.Group();
+   ghostGroup.add(ghost);
+   ghostGroup.add(leftEye);
+   ghostGroup.add(rightEye);
+   ghostGroup.add(irisRight);
+   ghostGroup.add(irisLeft);
+   // add group to the canvas scene
+   scene.add(ghostGroup);
 
 
   // add group to the canvas scene
