@@ -1,4 +1,4 @@
-const validatesInput = async (url) => {
+const validatesInput = async (url, name) => {
   // defines url regexp pattern to match/test against
   const urlPattern = new RegExp(
     "^(https://|http://)" + // does it have http:// or https://
@@ -11,13 +11,20 @@ const validatesInput = async (url) => {
     // the 'i' makes this whole pattern case insensitive
     "i"
   );
-  if (urlPattern.test(url)) {
+  // only accept alphanumerical, avoid SQL injections.
+  const namePattern = new RegExp(/^[a-zA-Z0-9]+$/);
+  // // if the URL and name match then fetch
+  if (urlPattern.test(url) && namePattern.test(name)) {
     // if jsut url isn't written correctly, give example of how to do it right
     return true;
   }
   if (!urlPattern.test(url)) {
     // if jsut url isn't written correctly, give example of how to do it right
     alert("URL must look like: https://www.example.com");
+  }
+  if (!namePattern.test(name)) {
+    // if jsut url isn't written correctly, give example of how to do it right
+    alert("Name must be alphanumerical (max 15 characters from a-z/A-Z and 0-9)");
   }
   // in any other case, prefer to return false
   return false;
