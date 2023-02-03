@@ -27,10 +27,47 @@ document.body.appendChild( renderer.domElement );
     transparent: false,
     opacity: 8,
   });
-  const cube = new THREE.Mesh( geometry, material );
-  scene.add(cube);
 
-  camera.position.z = 5;
+  // Define the ghost shape
+  // Define the rounded rectangle shape
+  var ghostShape = new THREE.Shape();
+  var x = -5,
+    y = -5,
+    width = 10,
+    height = 17,
+    radius = 5;
+  ghostShape.moveTo(x, y + radius); // start at bottom left corner of rect
+  ghostShape.lineTo(x, y + height - radius); // straight edge going up (make line the height - the radius)
+  ghostShape.quadraticCurveTo(x, y + height, x + radius, y + height); // go up to full height with curve
+  ghostShape.lineTo(x + width - radius, y + height); // makes top line of rect (not visible because of radius)
+  ghostShape.quadraticCurveTo(
+    x + width,
+    y + height,
+    x + width,
+    y + height - radius
+  ); // curve to right edge
+  ghostShape.lineTo(x + width, y + radius); // line to bottom right of rect
+
+
+  // Extrude the ghost shape to create a 3D object, with depth 3 and no bevel
+  var extrudeSettings = {
+    steps: 1,
+    depth: 3,
+    // would otherwise default to true
+    bevelEnabled: false
+  };
+  // calls function to extrude shape
+  var ghostGeometry = new THREE.ExtrudeGeometry(ghostShape, extrudeSettings);
+  var ghost = new THREE.Mesh(ghostGeometry, material);
+
+  scene.add(ghost)
+
+  camera.position.z = 50;
+
+  // const cube = new THREE.Mesh( geometry, material );
+  // scene.add(cube);
+
+  // camera.position.z = 5;
 
   // new light to shine on ghost, white, 3 intensity and 100 distance
   var light = new THREE.PointLight(0xffffff, 3, 100);
