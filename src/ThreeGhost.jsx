@@ -47,6 +47,12 @@ document.body.appendChild( renderer.domElement );
     y + height - radius
   ); // curve to right edge
   ghostShape.lineTo(x + width, y + radius); // line to bottom right of rect
+  // creates jagged edges, zig zag lines going up and down
+  ghostShape.lineTo(x + width / 2 + width / 3, 2);
+  ghostShape.lineTo(x + width / 1.5, height - height);
+  ghostShape.lineTo(x + width / 2, 2);
+  ghostShape.lineTo(x + width / 3, height - height);
+  ghostShape.lineTo(x + width / 6, 2);
 
 
   // Extrude the ghost shape to create a 3D object, with depth 3 and no bevel
