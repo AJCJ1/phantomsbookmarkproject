@@ -9,6 +9,22 @@ const Main = () => {
   const [name, setName] = useState("");
   const [url, setUrl] = useState("");
 
+
+  // Use effect hook to retrieve bookmarks from local storage and set them to the state
+  useEffect(() => {
+    const storedBookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+    setBookmarks(storedBookmarks);
+  }, []);
+
+  // Function to add a bookmark to local storage
+  const submitAddBookmark = () => {
+    setBookmarks([...bookmarks, { name, url }]);
+    localStorage.setItem(
+      "bookmarks",
+      JSON.stringify([...bookmarks, { name, url }])
+    );
+  };
+
   return (
     <div>
         {/* form to submit a new bookmark */}
@@ -19,6 +35,8 @@ const Main = () => {
           onSubmit={async (e) => {
             // Prevents default form refresh, completes input validation before submission
             e.preventDefault();
+              // checks if the user is editing or adding a new bookmark
+              submitAddBookmark();
               setName("");
               setUrl("");
             }
@@ -49,6 +67,7 @@ const Main = () => {
         <button className="delete-all-btn">
           Delete All Bookmarks
         </button>
+        {/* renders list of bookmarks */}
         <List />
 
         </div>
