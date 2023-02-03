@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client";
+import Main from './Main'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         </svg>{" "}
         Phantom Bookmarks
       </h1>
+      <Main />
     </div>
   );
 };
