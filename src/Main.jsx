@@ -124,7 +124,7 @@ const Main = () => {
           handleEditBookmark={handleEditBookmark}
           handleDeleteBookmark={handleDeleteBookmark}
         />
-        // feeds the state and set state down to pagination comp
+        {/* feeds the state and set state down to pagination comp */}
         <Pagination
            bookmarks={bookmarks}
            currentPage={currentPage}

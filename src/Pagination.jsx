@@ -1,5 +1,13 @@
 const Pagination = ({ bookmarks, currentPage, setCurrentPage }) => {
-    
+
+  // define number of items to be shown per page, and create an array to store page numbers
+  const itemsPerPage = 20;
+  const pageNumbers = [];
+  // Loop through the number of pages needed based on the number of bookmarks and items per page
+  for (let i = 1; i <= Math.ceil(bookmarks.length / itemsPerPage); i++) {
+    // Add the page number to the pageNumbers array
+    pageNumbers.push(i);
+  }
 
   return (
     <div className="pagination-main">
@@ -8,6 +16,15 @@ const Pagination = ({ bookmarks, currentPage, setCurrentPage }) => {
       >
         {"<"}
       </button>
+      {/* Render buttons for each page number */}
+      {pageNumbers.map((number) => (
+        <button
+          // Call the setCurrentPage function with the current page number when clicked
+          onClick={() => setCurrentPage(number)}
+        >
+          {number}
+        </button>
+      ))}
       <button
         className="pagination-btn"
       >
