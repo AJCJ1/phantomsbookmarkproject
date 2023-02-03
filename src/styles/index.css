@@ -1,3 +1,60 @@
+/* Import each styling file, organised by component */
+@import url("./Form.css");
+@import url('./Modal.css');
+@import url('./List.css');
+@import url('./Pagination.css');
+
+/* The box-sizing property makes elements include
+the padding and border in total width and height. */
+* {
+  box-sizing: border-box;
+  font-family: 'Alata', sans-serif;
+  font-size: calc(8px + 6 * ((100vw - 320px) / 680));
+}
+
+/* Simple title banner */
+.title {
+  font-size: calc(22px + 6 * ((100vw - 320px) / 680));
+  width: 100vw;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  margin: 0;
+  padding: 0;
+  background-color: #F4F4F4;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  color: #0e0e0e;
+}
+
+.phntm-logo {
+  width:4rem;
+  height:5rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 0.5rem;
+  display:none;
+}
+/* Macbook air and above */
+@media screen and (min-width: 1200px) {
+
+  .phntm-logo {
+    display:block;
+  }
+}
+
+/* all selected elements display in Phantom's Green */
+*::selection {
+  background-color: #00fdc7;
+  color:#0e0e0e;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0e0e0e;
+}
+
 /* WebGL rendered background canvas */
 canvas {
   margin:0;
