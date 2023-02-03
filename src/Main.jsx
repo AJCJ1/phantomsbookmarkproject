@@ -9,6 +9,10 @@ const Main = () => {
   const [name, setName] = useState("");
   const [url, setUrl] = useState("");
 
+  // State to determine whether we are adding or editing a bookmark
+  const [editing, setEditing] = useState(false);
+  const [editIndex, setEditIndex] = useState(null);
+
 
   const currentBookmarks = bookmarks;
 
@@ -27,6 +31,23 @@ const Main = () => {
     );
   };
 
+  // Function to handle editing a bookmark
+  const handleEditBookmark = (bookmark, index) => {
+    setEditing(true);
+    setEditIndex(index);
+    setName(bookmark.name);
+    setUrl(bookmark.url);
+  };
+
+  // Function to submit an edited bookmark to local storage
+  const submitEditBookmark = () => {
+    const newBookmarks = [...bookmarks];
+    newBookmarks[editIndex] = { name, url };
+    setBookmarks(newBookmarks);
+    localStorage.setItem("bookmarks", JSON.stringify(newBookmarks));
+    setEditing(false);
+  };
+
   return (
     <div>
         {/* form to submit a new bookmark */}
@@ -37,8 +58,7 @@ const Main = () => {
           onSubmit={async (e) => {
             // Prevents default form refresh, should complete input validation before submission
             e.preventDefault();
-              // should check if the user is editing or adding a new bookmark
-              submitAddBookmark();
+            editing ? submitEditBookmark() : submitAddBookmark();
               setName("");
               setUrl("");
             }
@@ -62,7 +82,7 @@ const Main = () => {
         />
         {/* submit button to add/update a bookmark */}
         <button className="submit-btn" type="submit">
-          Add bookmark
+          {editing ? "Update Bookmark" : "Add Bookmark"}
         </button>
         </form>
         <h2>Your bookmarks: </h2>
@@ -72,6 +92,8 @@ const Main = () => {
         {/* renders list of bookmarks */}
         <List
           currentBookmarks={currentBookmarks}
+          // feed the function down to list so edit button knows what it is
+          handleEditBookmark={handleEditBookmark}
         />
 
         </div>

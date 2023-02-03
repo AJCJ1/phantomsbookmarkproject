@@ -1,6 +1,6 @@
 import Bookmark from "./Bookmark";
 
-const List = ({currentBookmarks}) => {
+const List = ({currentBookmarks, handleEditBookmark}) => {
 
   return (
     <div className="list-main">
@@ -13,6 +13,10 @@ const List = ({currentBookmarks}) => {
               name={bookmark.name}
               url={bookmark.url}
               id={index}
+              // runs the edit bookmark func, args are each mark and its index
+              // then will set edit index to index and bookmarks name/url state
+              // accordingly
+              onEdit={() => handleEditBookmark(bookmark, index)}
             />
           ))
         }
