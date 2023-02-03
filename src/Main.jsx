@@ -35,9 +35,9 @@ const Main = () => {
         <form
           className="form-main"
           onSubmit={async (e) => {
-            // Prevents default form refresh, completes input validation before submission
+            // Prevents default form refresh, should complete input validation before submission
             e.preventDefault();
-              // checks if the user is editing or adding a new bookmark
+              // should check if the user is editing or adding a new bookmark
               submitAddBookmark();
               setName("");
               setUrl("");
