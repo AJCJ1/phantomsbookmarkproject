@@ -1,11 +1,12 @@
 import { createRoot } from "react-dom/client";
+import Main from "./Main";
 
 const App = () => {
   return (
     <div>
       <h1 className="title">
-      {/* render Phantom SVG */}
-      <svg xmlns="http://www.w3.org/2000/svg" className="phntm-logo">
+        {/* render Phantom SVG */}
+        <svg xmlns="http://www.w3.org/2000/svg" className="phntm-logo">
           <defs></defs>
           <path
             fill="#0e0e0e"
@@ -18,6 +19,7 @@ const App = () => {
         </svg>{" "}
         Phantom Bookmarks
       </h1>
+      <Main />
     </div>
   );
 };
