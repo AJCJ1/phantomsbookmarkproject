@@ -1,12 +1,12 @@
 // A functional component that displays a single bookmark
-const Bookmark = () => {
+const Bookmark = ({name}) => {
   // Returns a div that contains the bookmark name as a link,
   // and two buttons to allow editing and deleting of the bookmark
   return (
     <div className="bookmark-item">
       <div className="bookmark-center-left">
-        <a href="" target="_blank" rel="noreferrer">
-          TEST
+        <a href="#" target="_blank" rel="noreferrer">
+          {name}
         </a>
         <div className="bookmark-btns">
           <button className="list-btn">

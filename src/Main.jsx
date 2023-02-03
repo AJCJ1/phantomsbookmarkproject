@@ -10,6 +10,8 @@ const Main = () => {
   const [url, setUrl] = useState("");
 
 
+  const currentBookmarks = bookmarks;
+
   // Use effect hook to retrieve bookmarks from local storage and set them to the state
   useEffect(() => {
     const storedBookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
@@ -68,7 +70,9 @@ const Main = () => {
           Delete All Bookmarks
         </button>
         {/* renders list of bookmarks */}
-        <List />
+        <List
+          currentBookmarks={currentBookmarks}
+        />
 
         </div>
       </div>
