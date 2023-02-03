@@ -1,5 +1,5 @@
 // A functional component that displays a single bookmark
-const Bookmark = ({name, url, id, onEdit, onDelete}) => {
+const Bookmark = ({ name, url, id, onEdit, onDelete }) => {
   // Returns a div that contains the bookmark name as a link,
   // and two buttons to allow editing and deleting of the bookmark
   return (
