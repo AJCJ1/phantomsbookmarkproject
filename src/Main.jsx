@@ -96,7 +96,7 @@ const Main = () => {
         </button>
         </form>
         <h2>Your bookmarks: </h2>
-        <button className="delete-all-btn">
+        <button className="delete-all-btn" onClick={handleDeleteAllBookmarks}>
           Delete All Bookmarks
         </button>
         {/* renders list of bookmarks */}
