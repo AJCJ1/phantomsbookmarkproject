@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import List from "./List";
+import Pagination from "./Pagination"
 
 const Main = () => {
   // State to hold an array of all bookmarks
@@ -14,13 +15,14 @@ const Main = () => {
   const [editIndex, setEditIndex] = useState(null);
 
   // Calculate the current bookmarks to display based on the current page number
-  const itemsPerPage = 20;
-  const indexOfLastBookmark = currentPage * itemsPerPage;
-  const indexOfFirstBookmark = indexOfLastBookmark - itemsPerPage;
-  const currentBookmarks = bookmarks.slice(
-    indexOfFirstBookmark,
-    indexOfLastBookmark
-  );
+  // const itemsPerPage = 20;
+  // const indexOfLastBookmark = currentPage * itemsPerPage;
+  // const indexOfFirstBookmark = indexOfLastBookmark - itemsPerPage;
+  // const currentBookmarks = bookmarks.slice(
+  //   indexOfFirstBookmark,
+  //   indexOfLastBookmark
+  // );
+  const currentBookmarks = bookmarks
   // take all bookmarks, find page, slice all by the index of last and first
   // this way we get first 20 then second 20 etc etc.
 
@@ -124,6 +126,7 @@ const Main = () => {
           handleEditBookmark={handleEditBookmark}
           handleDeleteBookmark={handleDeleteBookmark}
         />
+        <Pagination />
 
         </div>
       </div>
