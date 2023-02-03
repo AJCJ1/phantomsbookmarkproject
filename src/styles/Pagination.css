@@ -1,0 +1,78 @@
+/* styles pagination buttons */
+.pagination-main {
+  width: 0rem;
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.page-number {
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  background-color: #F4F4F4;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  padding: 2rem;
+  transition: 0.2s ease;
+}
+.page-number:hover {
+  background-color: #00fdc7;
+  transition: 0.2s ease;
+}
+.page-active {
+  background-color: #00fdc7;
+}
+.pagination-btn {
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  color: #0e0e0e;
+  background-color: #F4F4F4;
+  border: none;
+  padding: 2rem;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: 0.2s ease;
+}
+.pagination-btn:hover {
+  color: #0e0e0e;
+  background-color: #00fdc7;
+  transition: 0.2s ease;
+}
+
+/* tablets and above */
+@media screen and (min-width: 500px) {
+  .page-number {
+    padding: 1rem;
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+  .pagination-btn {
+    padding:1rem;
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+
+}
+/* Macbook air and above */
+@media screen and (min-width: 1200px) {
+  .page-number {
+    width:2.8rem;
+    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+  }
+  .pagination-btn {
+    width:2.8rem;
+    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+  }
+}
+/* bigger monitors */
+@media screen and (min-width: 1600px) {
+  .page-number {
+    width:2.8rem;
+    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+  }
+  .pagination-btn {
+    width:2.8rem;
+    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+  }
+}
