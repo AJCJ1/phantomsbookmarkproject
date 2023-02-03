@@ -58,8 +58,15 @@ const Main = () => {
     }
   };
 
+
+
   const handleDeleteBookmark = (index) => {
     console.log(`deleting ${index}`)
+    const newBookmarks = [...bookmarks];
+    const bookmarkIndex = index;
+    newBookmarks.splice(bookmarkIndex, 1);
+    setBookmarks(newBookmarks);
+    localStorage.setItem("bookmarks", JSON.stringify(newBookmarks));
   };
 
   return (
@@ -106,7 +113,6 @@ const Main = () => {
         {/* renders list of bookmarks */}
         <List
           currentBookmarks={currentBookmarks}
-          // feed the function down to list so edit button knows what it is
           handleEditBookmark={handleEditBookmark}
           handleDeleteBookmark={handleDeleteBookmark}
         />
