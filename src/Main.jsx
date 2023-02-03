@@ -49,8 +49,10 @@ const Main = () => {
 
   // function to handle editing a bookmark
   const handleEditBookmark = (bookmark, index) => {
+    // Calculate the index of the bookmark in the original, unsliced bookmarks array
+    const originalIndex = (currentPage - 1) * itemsPerPage + index;
     setEditing(true);
-    setEditIndex(index);
+    setEditIndex(originalIndex);
     setName(bookmark.name);
     setUrl(bookmark.url);
   };
