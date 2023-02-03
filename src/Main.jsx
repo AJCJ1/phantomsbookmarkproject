@@ -82,7 +82,7 @@ const Main = () => {
         />
         {/* submit button to add/update a bookmark */}
         <button className="submit-btn" type="submit">
-          Add bookmark
+          {editing ? "Update Bookmark" : "Add Bookmark"}
         </button>
         </form>
         <h2>Your bookmarks: </h2>
