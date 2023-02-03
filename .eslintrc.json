@@ -1,4 +1,5 @@
 {
+  // use eslint recommended, import/errors, react/recommended, jsx-a11y/recommended, and prettier plugins
   "extends": [
     "eslint:recommended",
     "plugin:import/errors",
@@ -6,11 +7,19 @@
     "plugin:jsx-a11y/recommended",
     "prettier"
   ],
+  // specify rules to use
   "rules": {
+    // The react/prop-types rule checks that React components are correctly
+    // type-checking the props they receive. Confident in the type of data being
+    // passed to components, so not needed at this stage.
     "react/prop-types": 0,
+    // checks that the React variable is
+    // defined in scope. not needed as this react version doesn't require import.
     "react/react-in-jsx-scope": 0
   },
+  // use react, import, and jsx-a11y plugins
   "plugins": ["react", "import", "jsx-a11y"],
+  // specify ECMAScript version and features
   "parserOptions": {
     "ecmaVersion": 2022,
     "sourceType": "module",
@@ -18,17 +27,22 @@
       "jsx": true
     }
   },
+  // specify environments for the code
   "env": {
     "es6": true,
     "browser": true,
     "node": true
   },
+  // specify settings for plugins
   "settings": {
     "react": {
+      // detect the installed version of React
       "version": "detect"
     },
     "import/resolver": {
+      // system will look for imported modules in 'node_modules'
       "node": {
+        // set extensions for node resolve - look for js file first, then jsx
         "extensions": [".js", ".jsx"]
       }
     }
