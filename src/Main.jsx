@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import List from "./List";
 
 const Main = () => {
   // State to hold an array of all bookmarks
@@ -44,6 +45,12 @@ const Main = () => {
           Add bookmark
         </button>
         </form>
+        <h2>Your bookmarks: </h2>
+        <button className="delete-all-btn">
+          Delete All Bookmarks
+        </button>
+        <List />
+
         </div>
       </div>
   );
