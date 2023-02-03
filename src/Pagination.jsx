@@ -32,6 +32,8 @@ const Pagination = ({ bookmarks, currentPage, setCurrentPage }) => {
       ))}
       <button
         className="pagination-btn"
+        // Call the setCurrentPage function with the next page number when clicked
+        onClick={() => setCurrentPage(currentPage + 1)}
       >
         {">"}
       </button>
