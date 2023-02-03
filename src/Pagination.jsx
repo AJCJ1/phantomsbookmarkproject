@@ -1,5 +1,4 @@
 const Pagination = ({ bookmarks, currentPage, setCurrentPage }) => {
-
   // define number of items to be shown per page, and create an array to store page numbers
   const itemsPerPage = 20;
   const pageNumbers = [];
