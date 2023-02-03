@@ -1,0 +1,11 @@
+/* WebGL rendered background canvas */
+canvas {
+  margin:0;
+  position:fixed;
+  height:100vh;
+  width:100vw;
+  top:0;
+  left:0;
+  /* hides behind components */
+  z-index:-1;
+}
