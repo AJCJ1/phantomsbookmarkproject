@@ -1,7 +1,10 @@
 import Bookmark from "./Bookmark";
 
-const List = ({currentBookmarks, handleEditBookmark, handleDeleteBookmark}) => {
-
+const List = ({
+  currentBookmarks,
+  handleEditBookmark,
+  handleDeleteBookmark,
+}) => {
   return (
     <div className="list-main">
       <div className="list-container">
@@ -19,11 +22,8 @@ const List = ({currentBookmarks, handleEditBookmark, handleDeleteBookmark}) => {
               onEdit={() => handleEditBookmark(bookmark, index)}
               onDelete={() => handleDeleteBookmark(index)}
             />
-          ))
-        }
-        {!localStorage.bookmarks &&
-          <h2>No Bookmarks yet, why not add one?</h2>
-        }
+          ))}
+        {!localStorage.bookmarks && <h2>No Bookmarks yet, why not add one?</h2>}
       </div>
     </div>
   );
