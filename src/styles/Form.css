@@ -1,0 +1,131 @@
+/* Styles Form */
+.form-main {
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  width:85%;
+  border: 2px solid #F4F4F4;
+  display: flex;
+  padding: 1rem;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  width: 97.5%;
+  font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+  height: 4rem;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #F4F4F4;
+  border: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.input-field label {
+  color: #0e0e0e;
+}
+
+.input-field:focus-visible {
+  outline: none;
+  border:1px solid #00fdc7;
+}
+
+
+.submit-btn {
+  font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  height: 4rem;
+  /* width: 85%; */
+  width: 97.5%;
+  display: block;
+  background-color: #F4F4F4;
+  color: #1f1f1f;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.submit-btn:hover {
+  background-color: #00fdc7;
+}
+
+.delete-all-btn {
+  font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  height: 4rem;
+  width: 85%;
+  display: block;
+  background-color: #F4F4F4;
+  color: #1f1f1f;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.delete-all-btn:hover {
+  background-color: #00fdc7;
+}
+/* tablets and above */
+@media screen and (min-width: 500px) {
+
+  .form-container {
+    flex-direction: row;
+  }
+  .submit-btn {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+
+  .delete-all-btn {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    height: 4rem;
+  }
+}
+/* Macbook air and above */
+@media screen and (min-width: 1200px) {
+
+  .submit-btn {
+    font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+    width: 85%;
+    height: 3rem;
+  }
+
+  .input-field {
+    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+    width: 85%;
+    height: 3rem;
+  }
+  .delete-all-btn {
+    height: 3rem;
+  }
+}
+/* bigger monitors */
+@media screen and (min-width: 1600px) {
+
+  .submit-btn {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+  }
+
+  .input-field {
+    font-size: calc(6px + 6 * ((100vw - 320px) / 680));
+  }
+
+  .delete-all-btn {
+    height: 3rem;
+  }
+}
