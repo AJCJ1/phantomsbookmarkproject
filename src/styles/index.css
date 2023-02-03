@@ -11,7 +11,13 @@ the padding and border in total width and height. */
   font-family: 'Alata', sans-serif;
   font-size: calc(8px + 6 * ((100vw - 320px) / 680));
 }
-
+/* "add bookmark" and "your bookmarks" */
+h2 {
+  font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+  color: #F4F4F4;
+  text-align: center;
+  padding: 1rem;
+}
 /* Simple title banner */
 .title {
   font-size: calc(22px + 6 * ((100vw - 320px) / 680));
