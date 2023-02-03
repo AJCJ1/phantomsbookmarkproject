@@ -13,8 +13,16 @@ const Main = () => {
   const [editing, setEditing] = useState(false);
   const [editIndex, setEditIndex] = useState(null);
 
-
-  const currentBookmarks = bookmarks;
+  // Calculate the current bookmarks to display based on the current page number
+  const itemsPerPage = 20;
+  const indexOfLastBookmark = currentPage * itemsPerPage;
+  const indexOfFirstBookmark = indexOfLastBookmark - itemsPerPage;
+  const currentBookmarks = bookmarks.slice(
+    indexOfFirstBookmark,
+    indexOfLastBookmark
+  );
+  // take all bookmarks, find page, slice all by the index of last and first
+  // this way we get first 20 then second 20 etc etc.
 
   // Use effect hook to retrieve bookmarks from local storage and set them to the state
   useEffect(() => {
