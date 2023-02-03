@@ -58,6 +58,10 @@ const Main = () => {
     }
   };
 
+  const handleDeleteBookmark = (index) => {
+    console.log(`deleting ${index}`)
+  };
+
   return (
     <div>
         {/* form to submit a new bookmark */}
@@ -104,6 +108,7 @@ const Main = () => {
           currentBookmarks={currentBookmarks}
           // feed the function down to list so edit button knows what it is
           handleEditBookmark={handleEditBookmark}
+          handleDeleteBookmark={handleDeleteBookmark}
         />
 
         </div>

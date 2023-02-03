@@ -1,6 +1,6 @@
 import Bookmark from "./Bookmark";
 
-const List = ({currentBookmarks, handleEditBookmark}) => {
+const List = ({currentBookmarks, handleEditBookmark, handleDeleteBookmark}) => {
 
   return (
     <div className="list-main">
@@ -17,6 +17,7 @@ const List = ({currentBookmarks, handleEditBookmark}) => {
               // then will set edit index to index and bookmarks name/url state
               // accordingly
               onEdit={() => handleEditBookmark(bookmark, index)}
+              onDelete={() => handleDeleteBookmark(index)}
             />
           ))
         }
