@@ -14,7 +14,7 @@ const validatesInput = async (url, name) => {
     "i"
   );
   // only accept alphanumerical, avoid SQL injections.
-  const namePattern = new RegExp(/^[a-zA-Z0-9]+$/);
+  const namePattern = new RegExp(/^[a-zA-Z0-9\s]+$/);
   // // if the URL and name match then fetch
   if (urlPattern.test(url) && namePattern.test(name)) {
     const respondsOk = await FetchUrl(url);
