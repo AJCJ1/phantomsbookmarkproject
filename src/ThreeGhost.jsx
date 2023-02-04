@@ -75,7 +75,7 @@ const ThreeComponent = () => {
     steps: 1,
     depth: 3,
     // would otherwise default to true
-    bevelEnabled: false
+    bevelEnabled: false,
   };
   // calls function to extrude shape
   var ghostGeometry = new THREE.ExtrudeGeometry(ghostShape, extrudeSettings);
