@@ -11,6 +11,57 @@ the padding and border in total width and height. */
   font-family: 'Alata', sans-serif;
   font-size: calc(8px + 6 * ((100vw - 320px) / 680));
 }
+.cors-modal {
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height:100vh;
+  background-color: #0e0e0e;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index:1000;
+}
+
+.cors-modal h2 {
+  color: #F4F4F4;
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+}
+
+.cors-modal-button {
+  font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  height: 4rem;
+  width: 50%;
+  display: block;
+  background-color: #F4F4F4;
+  color: #0e0e0e;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.cors-modal-button:hover {
+  background-color: #00fdc7;
+}
+
+.cors-link {
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  text-decoration:underline;
+  text-decoration-color: #F4F4F4;
+  color: #00fdc7;
+}
+
+.cors-link:hover {
+  text-decoration-color: #00fdc7;
+  color: #F4F4F4;
+}
+
 /* "add bookmark" and "your bookmarks" */
 h2 {
   font-size: calc(20px + 6 * ((100vw - 320px) / 680));

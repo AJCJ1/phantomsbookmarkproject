@@ -1,10 +1,12 @@
 import { createRoot } from "react-dom/client";
 import Main from "./Main";
 import ThreeGhost from "./ThreeGhost";
+import CorsModal from "./CorsModal";
 
 const App = () => {
   return (
     <div>
+      <CorsModal />
       <h1 className="title">
         {/* render Phantom SVG */}
         <a href="/">

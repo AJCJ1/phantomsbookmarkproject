@@ -44,7 +44,6 @@
 .submit-btn {
   font-size: calc(14px + 6 * ((100vw - 320px) / 680));
   height: 4rem;
-  /* width: 85%; */
   width: 97.5%;
   display: block;
   background-color: #F4F4F4;
