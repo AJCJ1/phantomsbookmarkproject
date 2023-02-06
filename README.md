@@ -2,7 +2,7 @@ Want to get this running on your local machine?
 
 You'll need to do the following in your CLI, presuming you're running NPM, and have Node.js installed on your machine (v16.17.0 is ideal):
 
-``git clone https://github.com/AJCJ1/phantomsbookmarkproject.git``
+````git clone https://github.com/AJCJ1/phantomsbookmarkproject.git````
 
 cd phantomsbookmarkproject
 
