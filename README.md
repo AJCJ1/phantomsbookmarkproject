@@ -2,21 +2,21 @@ Want to get this running on your local machine?
 
 You'll need to do the following in your CLI, presuming you're running NPM, and have Node.js installed on your machine (v16.17.0 is ideal):
 
-````git clone https://github.com/AJCJ1/phantomsbookmarkproject.git````
+``git clone https://github.com/AJCJ1/phantomsbookmarkproject.git``
 
-cd phantomsbookmarkproject
+``cd phantomsbookmarkproject``
 
 Then install dependancies (Namely Vite, ESlint, Prettier, Three.JS, React.JS):
 
-npm install
+``npm install``
 
 Start dev server (Precompiles with Vite, so will likely run on port 5173/5174):
 
-npm run dev
+``npm run dev``
 
 Open up your favourite browser (Mine's Brave), and check the port it's running on in your terminal.
 
-localhost:5173
+``localhost:5173``
 
 Should do the trick.
 
