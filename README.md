@@ -1,4 +1,12 @@
-Want to get this running on your local machine?
+## **Introduction**
+
+This is a bookmark app built using HTML, CSS, and JavaScript (React.JS). The app allows users to add bookmarks with a name and URL, and displays a list of all bookmarks that persist across page reloads. Feel free to cherry pick the aspects of the site that interest you, by selecting the desired segment above.
+
+The application was coded in less than a day, focussed on keeping the app as framework free as possible RE functionality, but equally aimed to impress via use of the graphic framework Three.JS.
+
+***Before attempting to use the site, please bypass CORS restrictions requesting it via the button on the following site: [https://cors-anywhere.herokuapp.com/corsdemo](https://cors-anywhere.herokuapp.com/corsdemo) - See Technical Limitations for more information on why this inconvenience exists.***
+
+## **Want to get this running on your local machine?**
 
 You'll need to do the following in your CLI, presuming you're running NPM, and have Node.js installed on your machine (v16.17.0 is ideal):
 
@@ -27,15 +35,7 @@ Enjoy!
 
 Created by Arnold Cubici-Jones
 
-<strong><a href="https://ajcj1.github.io/vite-compiled-phantom-bookmarks/">Live Project </a></strong>
-
-## **Introduction**
-
-This is a bookmark app built using HTML, CSS, and JavaScript (React.JS). The app allows users to add bookmarks with a name and URL, and displays a list of all bookmarks that persist across page reloads. Feel free to cherry pick the aspects of the site that interest you, by selecting the desired segment above.
-
-The application was coded in less than a day, focussed on keeping the app as framework free as possible RE functionality, but equally aimed to impress via use of the graphic framework Three.JS.
-
-***Before attempting to use the site, please bypass CORS restrictions requesting it via the button on the following site: [https://cors-anywhere.herokuapp.com/corsdemo](https://cors-anywhere.herokuapp.com/corsdemo) - See Technical Limitations for more information on why this inconvenience exists.***
+## **<strong><a href="https://ajcj1.github.io/vite-compiled-phantom-bookmarks/">Live Project </a></strong>**
 
 ## **Requirements**
 
