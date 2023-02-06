@@ -27,7 +27,7 @@ Enjoy!
 
 Created by Arnold Cubici-Jones
 
-Live Project: [https://ajcj1.github.io/vite-compiled-phantom-bookmarks/](https://ajcj1.github.io/vite-compiled-phantom-bookmarks/)
+<a href="https://ajcj1.github.io/vite-compiled-phantom-bookmarks/">Live Project </a>
 
 ## **Introduction**
 
@@ -83,7 +83,7 @@ The implementation of the bookmark app follows a straightforward, modular design
 - LoadingModal.jsx: This component is rendered in Home.jsx and turns on when the user submits a bookmark and off when validatesInput returns true or false.
 - Index.html: This file renders the 'root' element, and in prod preloads the compiled Vite CSS/JS files.
 
-<img alt="System Architecture Diagram - Breakdown of Components" href="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c747570e-1c4e-40ea-b6d0-741eb3d0f9ef/Screenshot_2023-02-04_at_01.02.01.png" />
+<img alt="System Architecture Diagram - Breakdown of Components" src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c747570e-1c4e-40ea-b6d0-741eb3d0f9ef/Screenshot_2023-02-04_at_01.02.01.png" />
 
 System Architecture Diagram - Breakdown of Components
 
@@ -95,17 +95,9 @@ Rather than performing a quick and easy CLI command ‘npx create-react-app my-a
 
 The specified versions of the below dependancies were used as the developer was certain that these dependancies worked together, and though using the most up to date versions of these dependancies was considered, they were not in this instance appropriate as the project didn’t demand their benefits.
 
-Version Control: Git and Github have been used. Efforts have been made to explain changes on each PR to document the development process. It is on a public repository which can be found here:
-
-[https://github.com/AJCJ1/phantomsbookmarkproject](https://github.com/AJCJ1/phantomsbookmarkproject)
-
 For the sake of both simplicity and proof that there isn’t a backend, the page has been hosted on Github pages (among other technical limitations). Should requirements change, the site could be otherwise hosted on AWS Amplify, S3, or Heroku.
 
-It’s available here:
-
-[https://ajcj1.github.io/vite-compiled-phantom-bookmarks/](https://ajcj1.github.io/vite-compiled-phantom-bookmarks/)
-
-It’s been placed on a separate repository to the repo holding the main uncompiled files.
+It’s been placed on a <a href="https://github.com/AJCJ1/vite-compiled-phantom-bookmarks">separate repository</a> to the repo holding the main uncompiled files.
 
 In Package.json, the following dependancies are:
 
