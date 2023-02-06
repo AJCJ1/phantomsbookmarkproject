@@ -1,3 +1,5 @@
+## **<strong><a href="https://ajcj1.github.io/vite-compiled-phantom-bookmarks/">Live Project </a></strong>**
+
 ## **Introduction**
 
 This is a bookmark app built using HTML, CSS, and JavaScript (React.JS). The app allows users to add bookmarks with a name and URL, and displays a list of all bookmarks that persist across page reloads. Feel free to cherry pick the aspects of the site that interest you, by selecting the desired segment above.
@@ -34,8 +36,6 @@ This will run the Dev version, meaning you'll have the added benefits of recomme
 Enjoy!
 
 Created by Arnold Cubici-Jones
-
-## **<strong><a href="https://ajcj1.github.io/vite-compiled-phantom-bookmarks/">Live Project </a></strong>**
 
 ## **Requirements**
 
