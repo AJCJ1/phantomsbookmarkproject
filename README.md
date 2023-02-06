@@ -83,10 +83,6 @@ The implementation of the bookmark app follows a straightforward, modular design
 - LoadingModal.jsx: This component is rendered in Home.jsx and turns on when the user submits a bookmark and off when validatesInput returns true or false.
 - Index.html: This file renders the 'root' element, and in prod preloads the compiled Vite CSS/JS files.
 
-<img alt="System Architecture Diagram - Breakdown of Components" src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c747570e-1c4e-40ea-b6d0-741eb3d0f9ef/Screenshot_2023-02-04_at_01.02.01.png" />
-
-System Architecture Diagram - Breakdown of Components
-
 ### Technology Used
 
 JavaScript (JS): This project uses React with Vite for JSX pre-compilation and Eslint for linting. NPM is used for package management. React is useful for its flexibility and performance (particularly client-side component rendering), and along with Vite makes the application run as fast as possible. Eslint allows for consistency in coding standards.
@@ -197,11 +193,6 @@ Why a database might be more suitable:
     This is because it is quick to configure and doesn’t require an external library, meaning more Vanilla JavaScript code for the fetch request.
     
     **If you’re experimenting with the site, open the above link to “cors-anywhere”, press the ‘Request temporary access to the demo server’, and you’ll find you should stop getting 403 errors for the sites you attempt to add. You’ll be prompted to do so anyway.**
-    
-
-## Brief Demo
-
-<video src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a0264b7-7847-4c70-99db-cb23d0b7e86a/Screen_Recording_2023-02-04_at_01.18.43.mov" alt="Demo of the application running with main functionality"/>
 
 ## **Conclusion**
 
