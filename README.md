@@ -27,7 +27,7 @@ Enjoy!
 
 Created by Arnold Cubici-Jones
 
-<a href="https://ajcj1.github.io/vite-compiled-phantom-bookmarks/">Live Project </a>
+<strong style="color:#00fdc7;"><a href="https://ajcj1.github.io/vite-compiled-phantom-bookmarks/">Live Project </a></strong
 
 ## **Introduction**
 
