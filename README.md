@@ -210,11 +210,9 @@ What would improve this application?
 - day/night mode.
 - **more work on WebGL graphic.**
 
-Thanks for taking the time to read this Technical Design Document.
+Thanks for taking the time to read this.
 
-It was made by Arnold Cubici-Jones.
-
-You can contact him here:
+You can contact me here with any questions:
 
 Emails:
 
